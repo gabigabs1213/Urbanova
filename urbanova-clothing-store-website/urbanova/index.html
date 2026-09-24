@@ -1,0 +1,192 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URBANOVA — Viste a tu manera</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="#inicio" class="logo">URBANOVA</a>
+
+        <!-- Menú principal -->
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#productos" class="nav-link">Ropa</a></li>
+            <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          </ul>
+        </nav>
+
+
+        <div class="nav-actions">
+          <button class="cart-btn" id="cart-btn" aria-label="Abrir carrito">
+            🛒 <span class="cart-count" id="cart-count">0</span>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+
+
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <img
+        src="https://images.pexels.com/photos/6069952/pexels-photo-6069952.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+        alt="Moda urbana"
+        class="hero-img"
+      />
+      <div class="hero-content">
+        <h1 class="hero-title">Viste a tu manera</h1>
+        <p class="hero-text">Ropa urbana y moderna para expresar quién eres. Nueva colección disponible ahora.</p>
+        <a href="#productos" class="btn btn-primary">Ver colección</a>
+      </div>
+    </section>
+
+
+
+    <section class="categorias" id="categorias">
+      <div class="container">
+        <h2 class="section-title">Categorías</h2>
+        <div class="categorias-grid">
+          <button class="categoria-btn activo" data-categoria="todo">🛍️ Todo</button>
+          <button class="categoria-btn" data-categoria="camiseta">👕 Camisetas</button>
+          <button class="categoria-btn" data-categoria="pantalon">👖 Pantalones</button>
+          <button class="categoria-btn" data-categoria="sudadera">🧥 Sudaderas</button>
+          <button class="categoria-btn" data-categoria="zapatillas">👟 Zapatillas</button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="buscador-seccion">
+      <div class="container">
+        <div class="buscador-wrapper">
+          <span class="buscador-icono">🔍</span>
+          <input
+            type="text"
+            id="buscador"
+            class="buscador-input"
+            placeholder="Buscar productos..."
+            aria-label="Buscar productos"
+          />
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="productos-seccion" id="productos">
+      <div class="container">
+        <h2 class="section-title">Nuestra Colección</h2>
+        <div class="productos-grid" id="productos-grid">
+          <!-- Los productos se generan con JavaScript -->
+        </div>
+        <p class="sin-resultados" id="sin-resultados">No se encontraron productos 😕</p>
+      </div>
+    </section>
+
+
+
+    <section class="ofertas-seccion" id="ofertas">
+      <div class="container">
+        <h2 class="section-title">🔥 Ofertas Especiales</h2>
+        <p class="section-subtitle">¡No te quedes sin ellos!</p>
+        <div class="ofertas-grid" id="ofertas-grid">
+          <!-- Las ofertas se generan con JavaScript -->
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contacto-seccion" id="contacto">
+      <div class="container">
+        <h2 class="section-title">Registrate par mas ofertas:</h2>
+        <div class="contacto-wrapper">
+
+          <!-- Información de contacto -->
+          <div class="contacto-info">
+            <h3>¿Hablamos?</h3>
+            <p>Estamos aquí para ayudarte con cualquier duda.</p>
+            <ul class="contacto-lista">
+              <li>📧 <a href="mailto:hola@urbanova.es">hola@urbanova.es</a></li>
+              <li>📞 <a href="tel:+34900123456">+34 900 123 456</a></li>
+              <li>📍 Calle Gran Vía 42, Madrid</li>
+            </ul>
+            <div class="horario">
+              <strong>Horario de atención:</strong><br />
+              Lunes a Viernes: 9:00 – 18:00<br />
+              Sábados: 10:00 – 14:00
+            </div>
+          </div>
+
+
+          <form class="contacto-form" id="contacto-form" novalidate>
+            <div class="form-grupo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-grupo">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+            <div class="form-grupo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+            <p class="form-confirmacion" id="form-confirmacion"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-contenido">
+          <span class="logo">URBANOVA</span>
+          <p>© 2025 URBANOVA. Todos los derechos reservados.</p>
+          <p class="footer-small">Hecho con ❤️ para los amantes del estilo urbano.</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <div class="carrito-overlay" id="carrito-overlay"></div>
+    <div class="carrito-modal" id="carrito-modal" aria-modal="true" role="dialog">
+      <div class="carrito-header">
+        <h2>🛒 Mi Carrito</h2>
+        <button class="carrito-cerrar" id="carrito-cerrar" aria-label="Cerrar carrito">✕</button>
+      </div>
+      <div class="carrito-cuerpo" id="carrito-cuerpo">
+        <!-- Los productos del carrito se generan con JavaScript -->
+      </div>
+      <div class="carrito-footer">
+        <div class="carrito-total">
+          <span>Total:</span>
+          <strong id="carrito-total">0,00 €</strong>
+        </div>
+        <button class="btn btn-primary btn-full" id="btn-comprar">Finalizar compra</button>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+  </html>
